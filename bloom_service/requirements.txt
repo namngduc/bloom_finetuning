@@ -1,0 +1,7 @@
+transformers
+peft 
+scipy
+accelerate 
+bitsandbytes
+gradio
+torch>=1.13.1
