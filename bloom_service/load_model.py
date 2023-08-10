@@ -33,21 +33,18 @@ except:
 if device == "cuda":
     model = AutoModelForCausalLM.from_pretrained(
         config.base_model_name_or_path,
-        load_in_8bit=True,
         torch_dtype=torch.float16,
         device_map="auto",
-        offload_folder="offload"
     )
 elif device == "mps":
     model = AutoModelForCausalLM.from_pretrained(
         config.base_model_name_or_path,
-        device_map={"": device},
+        device_map=device,
         torch_dtype=torch.float16,
     )
 else:
     model = AutoModelForCausalLM.from_pretrained(
-        config.base_model_name_or_path, device_map={"": device}, low_cpu_mem_usage=True,
-        offload_folder="offload",
+        config.base_model_name_or_path, device_map=device, low_cpu_mem_usage=True,
         quantization_config=quantization_config
     )
 

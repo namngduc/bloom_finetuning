@@ -16,4 +16,4 @@ RUN chmod +x /BLOOM/app.py /BLOOM/load_model.py
 WORKDIR /BLOOM
 RUN /BLOOM/load_model.py   # Pre-loading model
 RUN rm -rf offload/
-CMD [ "python", "-u", "/BLOOM/app.py"]
+CMD [ "start_app.sh"]

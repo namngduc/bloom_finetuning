@@ -21,4 +21,4 @@ for i in range(len(data)):
     df.loc[k] = [instruction_, input_, output_, text_]
     k += 1
 
-df.to_csv('data_10k_processed.csv', index=False)`
+df.to_csv('data_10k_processed.csv', index=False)
