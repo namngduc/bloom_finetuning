@@ -1,6 +1,6 @@
 # Bloom fine-tuning for generate text base on alpaca [dataset](https://huggingface.co/datasets/tatsu-lab/alpaca) 
 
-The training and fine-tuning process in `Fine-tuning Bloom-1b1.ipynb` notebook. You can try to optimize the model further by yourself<br>
+The training and fine-tuning process in `Fine-tuning Bloom-1b1.ipynb` notebook. You can try to optimize the model further by yourself. <br>
 For run the application. Go to `bloom_service` folder
 
 ### Run app on local machine
