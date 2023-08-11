@@ -1,6 +1,6 @@
 # Bloom fine-tuning for generate text base on alpaca [dataset](https://huggingface.co/datasets/tatsu-lab/alpaca) 
 
-The training and fine-tuning process in `Fine-tuning Bloom-1b1.ipynb` notebook. <br>
+The training and fine-tuning process in `Fine-tuning Bloom-1b1.ipynb` notebook. You can try to optimize the model further by yourself<br>
 For run the application. Go to `bloom_service` folder
 
 ### Run app on local machine
@@ -50,11 +50,11 @@ curl --location --request POST 'http://0.0.0.0:8080/bloom_generate' \
 --header 'Content-Type: application/json' \
 --data-raw '[
     {
-        "instruction": "Generate a list of ten items a person might need for a camping trip",
-        "input": ""  
+        "instruction": "What is the main idea of this text?",
+        "input": "The robotics industry has become one of the fastest growing sectors in today’s economy. Robotics technology is being applied in various industries and applications, such as manufacturing, healthcare, and defense."  
     },
     {
-        "instruction": "What is the capital of France?",
+        "instruction": "Describe in a few words what makes a good leader.",
         "input": ""
     }
 ]'
@@ -63,14 +63,14 @@ Result:
 ```bash
 [
     {
-        "instuction": "Generate a list of ten items a person might need for a camping trip",
-        "input": "",
-        "output": "1. Tent\n2. Sleeping bag\n3. Camping stove\n4. Flashlight\n5. Water bottle\n6. Camping chairs\n7. Camping blankets\n8. Cooking utensils\n9. Camping equipment\n10. Firewood. The list could go on and on. It is up to the person to decide what items they need for a camping trip. It is up to them to decide what they want to do and where they want to go. It is up to them to make the most of their camping trip. It is up to them to decide what they want to do and where they"
+        "instuction": "What is the main idea of this text?",
+        "input": "The robotics industry has become one of the fastest growing sectors in today’s economy. Robotics technology is being applied in various industries and applications, such as manufacturing, healthcare, and defense.",
+        "output": "The main idea of this text is that robotics technology is being used in various industries and applications, such as manufacturing, healthcare, and defense. It is being used to automate processes, increase efficiency, and reduce costs. Additionally, robotics technology is being used to improve safety and security, as well as to provide more personalized services. Overall, robotics technology is becoming increasingly important in the modern world. It is being used to revolutionize the way we work and live. It is a powerful"
     },
     {
-        "instuction": "What is the capital of France?",
+        "instuction": "Describe in a few words what makes a good leader.",
         "input": "",
-        "output": "Paris is the capital of France. It is located in the southwestern region of the country. It is the largest city in France and the second-largest city in Europe. It is also the seat of the French government and the capital of the European Union. It is also the seat of the European Court of Justice. Paris is also home to the Louvre Museum, the Eiffel Tower, and the Arc de Triomphe. It is also the birthplace of the French Revolution. Paris is also home to the Louvre Museum, the Eiffel Tower, and the Arc de Triomphe. It is also the birthplace of the French Revolution. Paris"
+        "output": "A good leader is someone who is able to motivate and inspire others to achieve their goals. They are also able to build trust and relationships with their team members, and are able to communicate effectively. A good leader also has the ability to listen and understand their team members' needs, and to be able to provide constructive feedback. They are also able to build relationships with their stakeholders, and to be able to communicate effectively with them. A good leader is also able to be flexible and willing to"
     }
 ]
 ```

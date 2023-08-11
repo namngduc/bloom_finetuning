@@ -50,7 +50,7 @@ class ModelInference:
             top_p=0.75,
             top_k=40,
             num_beams=4,
-            max_new_tokens=128,
+            max_new_tokens=100,
             **kwargs,
         ):
         if self.batch_size > len(input_sentences):
@@ -74,7 +74,8 @@ class ModelInference:
             num_beams=num_beams,
             **kwargs,
         )
-        generate_kwargs = dict(generation_config=generation_config,
+        generate_kwargs = dict(
+                # generation_config=generation_config,
                 return_dict_in_generate=True,
                 output_scores=True,
                 max_new_tokens=max_new_tokens, 

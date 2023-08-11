@@ -5,3 +5,5 @@ accelerate
 bitsandbytes
 torch
 fastapi
+gunicorn
+uvicorn

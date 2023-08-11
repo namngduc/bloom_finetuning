@@ -1,4 +1,4 @@
-FROM python:3.9-buster
+FROM python:3.10-buster
 
 
 RUN apt-get update && apt-get install -y tzdata \
@@ -11,9 +11,9 @@ ADD . /BLOOM
 RUN pip install -U pip \
     && pip install --no-cache-dir --upgrade -r /BLOOM/requirements.txt
 
-RUN chmod +x /BLOOM/app.py /BLOOM/load_model.py
+RUN chmod +x /BLOOM/start_app.sh /BLOOM/load_model.py
 
 WORKDIR /BLOOM
 RUN /BLOOM/load_model.py   # Pre-loading model
 RUN rm -rf offload/
-CMD [ "start_app.sh"]
+CMD [ "./start_app.sh"]

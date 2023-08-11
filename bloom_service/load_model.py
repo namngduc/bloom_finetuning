@@ -39,12 +39,11 @@ if device == "cuda":
 elif device == "mps":
     model = AutoModelForCausalLM.from_pretrained(
         config.base_model_name_or_path,
-        device_map=device,
         torch_dtype=torch.float16,
     )
 else:
     model = AutoModelForCausalLM.from_pretrained(
-        config.base_model_name_or_path, device_map=device, low_cpu_mem_usage=True,
+        config.base_model_name_or_path, low_cpu_mem_usage=True,
         quantization_config=quantization_config
     )
 
