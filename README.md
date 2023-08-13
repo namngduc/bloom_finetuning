@@ -9,11 +9,15 @@ For run the application. Go to `bloom_service` folder
 ```bash
 $ conda create -n bloom python==3.10
 ```
-3. Install dependencies
+3. Activate environtment
+```bash
+$ conda activate bloom
+```
+4. Install dependencies
 ```bash
 $ pip install -r requirements.txt
 ```
-4. Run app via command:
+5. Run app via command:
 ```bash
 $ chmod +x start_app.sh
 ```
